@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    position: 0;
+    background: #4169;
+}
+.relogio{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 200px;
+    border: 15px, solid #00a86b;
+    border-radius: 50%;
+    background: url(Rr.jpg) #262626;
+    background-size: cover;
+    box-shadow: 2px 2px 0 #007436, inset 0 0 20px, rgba(0, 0, 0, 0.5);
+
+}
+.relogio ::before{
+    content: "";
+    position:absolute;
+    top: calc(50% - 3px);
+    left: 50%;
+    width: 40%;
+    height: 6px;
+    background: #262626;
+    border-radius: 3px;
+    transform-origin: left;
+    animation: relogio 15s linear infinite;
+
+}
+.relogio ::after{
+    content: "";
+    position:absolute;
+    top: calc(50% - 3px);
+    left: 50%;
+    width: 30%;
+    height: 6px;
+    background: #262626;
+    border-radius: 3px;
+    transform-origin: left;
+    animation: relogio 60s linear infinite;
+}
+span{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 10px;
+    height: 10px;
+    background: #ff5ff5;
+    border-radius: 50%;
+    z-index: 1;
+
+}
+@keyframes relogio{
+    0%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
